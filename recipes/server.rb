@@ -106,7 +106,7 @@ if node['mariadb']['allow_root_pass_change']
   end
 end
 
-if  node['mariadb']['allow_root_pass_change'] ||
+if node['mariadb']['allow_root_pass_change'] ||
     node['mariadb']['forbid_remote_root']
   execute 'install-grants' do
     # Add sensitive true when foodcritic #233 fixed

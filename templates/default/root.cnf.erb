@@ -1,4 +1,4 @@
-<% %w{mysql mysqldump mysqlcheck mysqladmin mysqlshow}.each do |section| -%>
+<% %w{client mysql mysqldump mysqlcheck mysqladmin mysqlshow}.each do |section| -%>
 [<%= section %>]
 user=root
 password=<%= node['mariadb']['server_root_password'] %>
